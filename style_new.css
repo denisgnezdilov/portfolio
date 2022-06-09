@@ -1,0 +1,848 @@
+/**
+ * RESET
+ * Reference: http://meyerweb.com/eric/tools/css/reset/
+ */
+
+/* ||||||||||| */
+
+/* /*! */
+ /* * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com) */
+ /* * Code licensed under the Apache License v2.0. */
+ /* * For details, see http://www.apache.org/licenses/LICENSE-2.0. */
+ /* */
+ 
+ /*! * * * * * * * * * * * * * * * * * * * *\  
+  CSShake :: shake-slow
+  v1.5.0
+  CSS classes to move your DOM
+  (c) 2015 @elrumordelaluz
+  http://elrumordelaluz.github.io/csshake/
+  Licensed under MIT
+\* * * * * * * * * * * * * * * * * * * * */
+
+	body {
+		overflow-x: hidden;
+		font-family: 'Abel', sans-serif;
+	}
+	
+	hr{ 
+		height: 2px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); 
+		width: 90%;
+		border=0;
+		height=1px;
+	}
+	
+	.shake-slow {
+		display:inherit;
+		transform-origin:center center
+	}
+	
+	.shake-freeze,.shake-constant.shake-constant--hover:hover,.shake-trigger:hover .shake-constant.shake-constant--hover {
+		animation-play-state:paused
+	}
+	
+	.shake-freeze:hover,.shake-trigger:hover .shake-freeze,.shake-slow:hover,.shake-trigger:hover .shake-slow {
+		animation-play-state:running
+	}
+		
+	@keyframes shake-slow{
+		2%{transform:translate(2px, -2px) rotate(3.5deg)}
+		4%{transform:translate(7px, 3px) rotate(-.5deg)}
+		6%{transform:translate(6px, 3px) rotate(.5deg)}
+		8%{transform:translate(4px, 7px) rotate(.5deg)}
+		10%{transform:translate(-8px, 3px) rotate(1.5deg)}
+		12%{transform:translate(3px, -6px) rotate(-2.5deg)}
+		14%{transform:translate(2px, -8px) rotate(1.5deg)}
+		16%{transform:translate(2px, 7px) rotate(2.5deg)}
+		18%{transform:translate(1px, 5px) rotate(-1.5deg)}
+		20%{transform:translate(-1px, 0px) rotate(.5deg)}
+		22%{transform:translate(1px, -2px) rotate(3.5deg)}
+		24%{transform:translate(1px, -8px) rotate(-2.5deg)}
+		26%{transform:translate(-7px, -6px) rotate(3.5deg)}
+		28%{transform:translate(-6px, -5px) rotate(3.5deg)}
+		30%{transform:translate(9px, -7px) rotate(-1.5deg)}
+		32%{transform:translate(3px, 5px) rotate(3.5deg)}
+		34%{transform:translate(10px, -9px) rotate(-1.5deg)}
+		36%{transform:translate(8px, -8px) rotate(3.5deg)}
+		38%{transform:translate(-9px, 5px) rotate(.5deg)}
+		40%{transform:translate(-3px, -9px) rotate(1.5deg)}
+		42%{transform:translate(5px, 7px) rotate(1.5deg)}
+		44%{transform:translate(-4px, 1px) rotate(-.5deg)}
+		46%{transform:translate(3px, 1px) rotate(1.5deg)}
+		48%{transform:translate(-9px, 6px) rotate(2.5deg)}
+		50%{transform:translate(1px, 3px) rotate(-2.5deg)}
+		52%{transform:translate(7px, -9px) rotate(2.5deg)}
+		54%{transform:translate(10px, 4px) rotate(-.5deg)}
+		56%{transform:translate(3px, -5px) rotate(1.5deg)}
+		58%{transform:translate(4px, -3px) rotate(-.5deg)}
+		60%{transform:translate(9px, 5px) rotate(-1.5deg)}
+		62%{transform:translate(8px, -9px) rotate(.5deg)}
+		64%{transform:translate(-8px, -9px) rotate(-1.5deg)}
+		66%{transform:translate(-9px, -1px) rotate(1.5deg)}
+		68%{transform:translate(-4px, -2px) rotate(3.5deg)}
+		70%{transform:translate(-2px, 6px) rotate(-2.5deg)}
+		72%{transform:translate(3px, 1px) rotate(1.5deg)}
+		74%{transform:translate(-4px, -3px) rotate(2.5deg)}
+		76%{transform:translate(3px, 1px) rotate(-.5deg)}
+		78%{transform:translate(8px, 0px) rotate(2.5deg)}
+		80%{transform:translate(10px, -6px) rotate(2.5deg)}
+		82%{transform:translate(-4px, 6px) rotate(1.5deg)}
+		84%{transform:translate(-2px, 2px) rotate(3.5deg)}
+		86%{transform:translate(-5px, 3px) rotate(2.5deg)}
+		88%{transform:translate(7px, -4px) rotate(2.5deg)}
+		90%{transform:translate(10px, 9px) rotate(-.5deg)}
+		92%{transform:translate(8px, 4px) rotate(.5deg)}
+		94%{transform:translate(7px, 10px) rotate(2.5deg)}
+		96%{transform:translate(2px, -2px) rotate(-.5deg)}
+		98%{transform:translate(-1px, -5px) rotate(3.5deg)}
+		0%,100%{transform:translate(0, 0) rotate(0)}}
+		
+	.shake-slow:hover,.shake-trigger:hover .shake-slow,.shake-slow.shake-freeze,.shake-slow.shake-constant {
+			animation-name:shake-slow;
+			animation-duration:0s;
+			animation-timing-function:ease-in-out;
+			animation-iteration-count:infinite
+		}
+
+	.hero {
+		
+		z-index: 1100;
+		/* Sizing */
+		width: 100%;
+		height: 100vh;
+		
+		/* Flexbox stuff */
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		
+		/* Text styles */
+		text-align: center;
+		color: rgb(0, 0, 0);
+		
+		/* Background styles */
+		background-image: url('header-bg.png');
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+
+	.hero h1 {
+		/* Text styles */
+		font-size: 6em;
+		font-family: 'Abel', serif;
+		
+		/* Margins */
+		margin-left: 80%;
+		margin-top: 0;
+		margin-bottom: 0.5em;
+	}
+	
+	.hero h2 {
+		/* Text styles */
+		font-size: 2.5em;
+		font-family: 'Abel', serif;
+		color: rgb(0, 0, 0);
+		
+		/* Margins */
+		margin-left: 90%;
+		margin-top: 30%;
+		margin-bottom: 0.5em;
+	}
+	
+	.hero a{
+		color: white;
+		text-decoration: none;
+	}
+	
+	.hero a:hover{
+		color: white;
+		text-decoration: none;
+	}
+	
+	.hero a:active{
+		color: teal;
+		text-decoration: none;
+	}
+	
+	.hero a:active{
+		color: teal;
+		text-decoration: none;
+	}
+	
+	.hero-inner-icons{
+		color: white;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+		font-family: 'Abel', sans-serif;
+		font-size: 24px;
+	}
+	
+	.container{
+		width: 100%;
+	}
+	
+	.section-heading{
+		font-family: 'Abel', sans-serif;
+	}
+	
+	.section-subheading{
+		margin: 0;
+		font-family: 'Abel', sans-serif;
+		font-size: 21px;
+	}
+	
+	.footer a{
+		font-size: 15px;
+		color: white;
+		margin-left: 15px;
+	}
+	
+	a{
+		color: white;
+		text-decoration: none;
+	}
+	
+	a:hover{
+		color: rgb(250, 235, 170);
+		text-decoration: none;
+	}
+	
+	#myBtn {
+		display: none;
+		position: fixed;
+		bottom: 15px;
+		right: 20px;
+		z-index: 99;
+		font-size: 18px;
+		border: none;
+		outline: none;
+		background-color: rgb(255, 168, 55);
+		color: white;
+		cursor: pointer;
+		padding: 15px;
+		border-radius: 4px;
+		font-family: 'Abel', sans-serif;
+	}
+
+	#myBtn:hover {
+		background-color: #555;
+	}
+	
+	.footer {
+		color: white;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		padding: 3rem;
+		background-color: #222222;
+		text-align: center;
+		font-family: 'Abel', sans-serif;
+		font-size: 18px;
+	}
+
+	.text-muted {
+		color: #777;
+	}
+
+	.text-primary {
+		color: #165f63;
+	}
+
+	p {
+		font-size: 14px;
+		line-height: 1.75;
+	}
+
+	p.large {
+		font-size: 16px;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		text-transform: uppercase;
+		font-family: 'Abel', sans-serif;
+		font-weight: 700;
+	}
+
+	.img-centered {
+		margin: 0 auto;
+	}
+
+	.bg-light-gray {
+		background-color: #ffffff;
+	}
+
+	.bg-darkest-gray {
+		background-color: #222;
+	}
+
+	.btn-primary {
+		border-color: teal;
+		text-transform: uppercase;
+		font-family: 'Abel', sans-serif;
+		font-weight: 700;
+		color: #fff;
+		background-color: teal;
+	}
+
+	.btn-primary:hover,
+	.btn-primary:focus,
+	.btn-primary:active,
+	.btn-primary.active,
+	.open .dropdown-toggle.btn-primary {
+		border-color: teal;
+		color: #fff;
+		background-color: teal;
+	}
+
+	.btn-primary:active,
+	.btn-primary.active,
+	.open .dropdown-toggle.btn-primary {
+		background-image: none;
+	}
+
+	.btn-primary.disabled,
+	.btn-primary[disabled],
+	fieldset[disabled] .btn-primary,
+	.btn-primary.disabled:hover,
+	.btn-primary[disabled]:hover,
+	fieldset[disabled] .btn-primary:hover,
+	.btn-primary.disabled:focus,
+	.btn-primary[disabled]:focus,
+	fieldset[disabled] .btn-primary:focus,
+	.btn-primary.disabled:active,
+	.btn-primary[disabled]:active,
+	fieldset[disabled] .btn-primary:active,
+	.btn-primary.disabled.active,
+	.btn-primary[disabled].active,
+	fieldset[disabled] .btn-primary.active {
+		border-color: teal;
+		background-color: teal;
+	}
+
+	.btn-primary .badge {
+		color: teal;
+		background-color: #fff;
+	}
+
+	.btn-xl {
+		padding: 20px 40px;
+		border-color: teal;
+		border-radius: 3px;
+		text-transform: uppercase;
+		font-family: 'Abel', sans-serif;
+		font-size: 18px;
+		font-weight: 700;
+		color: #fff;
+		background-color: teal;
+	}
+
+	.btn-xl:hover,
+	.btn-xl:focus,
+	.btn-xl:active,
+	.btn-xl.active,
+	.open .dropdown-toggle.btn-xl {
+		border-color: teal;
+		color: #fff;
+		background-color: teal;
+	}
+
+	.btn-xl:active,
+	.btn-xl.active,
+	.open .dropdown-toggle.btn-xl {
+		background-image: none;
+	}
+
+	.btn-xl.disabled,
+	.btn-xl[disabled],
+	fieldset[disabled] .btn-xl,
+	.btn-xl.disabled:hover,
+	.btn-xl[disabled]:hover,
+	fieldset[disabled] .btn-xl:hover,
+	.btn-xl.disabled:focus,
+	.btn-xl[disabled]:focus,
+	fieldset[disabled] .btn-xl:focus,
+	.btn-xl.disabled:active,
+	.btn-xl[disabled]:active,
+	fieldset[disabled] .btn-xl:active,
+	.btn-xl.disabled.active,
+	.btn-xl[disabled].active,
+	fieldset[disabled] .btn-xl.active {
+		border-color: teal;
+		background-color: teal;
+	}
+
+	.btn-xl .badge {
+		color: teal;
+		background-color: #fff;
+	}
+
+	header {
+		text-align: center;
+		color: #fff;
+		background-attachment: scroll;
+		background-image: url(../img/header-bg.png);
+		background-position: center center;
+		background-repeat: none;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+		-o-background-size: cover;
+	}
+
+	header .intro-text {
+		padding-top: 100px;
+		padding-bottom: 50px;
+	}
+
+	header .intro-text .intro-lead-in {
+		margin-bottom: 25px;
+		font-family: 'Abel', sans-serif;
+		font-size: 22px;
+		font-style: normal;
+		line-height: 22px;
+	}
+
+	header .intro-text .intro-heading {
+		margin-bottom: 25px;
+		text-transform: uppercase;
+		font-family: 'Abel', sans-serif;
+		font-size: 50px;
+		font-weight: 700;
+		line-height: 50px;
+	}
+
+	@media(min-width:768px) {
+		header .intro-text {
+			padding-top: 200px;
+			padding-bottom: 200px;
+			padding-left: 100px;
+			padding-right: 100px;
+		}
+
+		header .intro-text .intro-lead-in {
+			margin-bottom: 25px;
+			font-family: 'Abel', sans-serif;
+			font-size: 40px;
+			font-style: normal;
+			line-height: 40px;
+		}
+
+		header .intro-text .intro-heading {
+			margin-bottom: 50px;
+			text-transform: uppercase;
+			font-family: 'Abel', sans-serif;
+			font-size: 75px;
+			font-weight: 700;
+			line-height: 75px;
+		}
+
+	}
+
+	#portfolio .portfolio-item {
+		right: 0;
+		margin: 0 0 0px;
+
+	}
+
+	#portfolio .portfolio-item .portfolio-link {
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		max-width: 400px;
+	}
+
+	#portfolio .portfolio-item .portfolio-link img {
+		height: 240px;
+		transition: all ease .3s;
+	}
+
+	#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		/* below changes color on hovering */
+		background: rgba(0,0,0,.9);
+		-webkit-transition: all ease .3s;
+		-moz-transition: all ease .3s;
+		transition: all ease .3s;
+	}
+	
+	.portfolio-link img {
+	  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+	  filter: grayscale(0%);
+	}
+	
+	/* So we have to write .xxxx:hover img instead of .xxxx img:hover for it to work everywhere */
+	.portfolio-link:hover img {
+	  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+	  filter: grayscale(0%);
+	  transition: all ease .3s;
+	  transform: scale(1.05);
+	}
+	
+	/* Chnage opacity of on-hover modal here */
+	#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+		opacity: 0;
+	}
+
+	#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		height: 20px;
+		margin-top: -12px;
+		text-align: center;
+		font-size: 20px;
+		color: #fff;
+	}
+
+	#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+		margin-top: -12px;
+	}
+
+	#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+	#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+		margin: 0;
+		font-family: 'Abel', sans-serif;
+	}
+
+	#portfolio .portfolio-item .portfolio-caption {
+		margin: 0 auto;
+		padding: 15px;
+		max-width: 500px;
+		text-align: center;
+		background-color: #fff;
+	}
+
+	#portfolio .portfolio-item .portfolio-caption h4 {
+		margin: 0;
+		text-transform: none;
+		font-family: 'Abel', sans-serif;
+		font-size: 18px;
+	}
+
+	#portfolio .portfolio-item .portfolio-caption p {
+		margin: 0;
+		font-family: 'Abel', sans-serif;
+		font-size: 18px;
+		/* font-style: italic; */
+	}
+
+	#portfolio * {
+		z-index: 2;
+	}
+
+	@media(min-width:767px) {
+		#portfolio .portfolio-item {
+			margin: 0 0 30px;
+		}
+		
+		.portfolio-link img {
+			-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+			filter: grayscale(100%);
+		}
+	}
+
+	.flexbox {
+	  display: -webkit-box;
+	  display: -moz-box;
+	  display: -ms-flexbox;
+	  display: -webkit-flex;
+	  display: flex;
+	  -webkit-flex-flow: row wrap;
+	  flex-flow: row wrap;
+	  justify-content: flex-start;
+	  align-items: stretch;
+	}
+
+	.flexbox-center {
+	  justify-content: center;
+	}
+
+	.portfolio-modal .modal-content {
+		padding: 100px 0;
+		min-height: 100%;
+		border: 0;
+		border-radius: 0;
+		text-align: center;
+		background-clip: border-box;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		font-family: 'Abel', sans-serif;
+		font-size: 18px;
+	}
+
+	.portfolio-modal .modal-content h2 {
+		margin-bottom: 15px;
+		font-size: 3em;
+	}
+
+	.portfolio-modal .modal-content p {
+		margin-bottom: 30px;
+		font-size: 18px;
+	}
+
+	.portfolio-modal .modal-content p.item-intro {
+		margin: 20px 0 30px;
+		font-family: 'Abel', sans-serif;
+		font-size: 18px;
+		font-style: italic;
+	}
+
+	.portfolio-modal .modal-content ul.list-inline {
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+
+	.portfolio-modal .modal-content img {
+		margin-bottom: 30px;
+	}
+
+	.portfolio-modal .close-modal {
+		position: absolute;
+		top: 25px;
+		right: 25px;
+		width: 75px;
+		height: 75px;
+		background-color: transparent;
+		cursor: pointer;
+	}
+
+	.portfolio-modal .close-modal:hover {
+		opacity: .3;
+	}
+
+	.portfolio-modal .close-modal .lr {
+		z-index: 1051;
+		width: 1px;
+		height: 75px;
+		margin-left: 35px;
+		background-color: #222;
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	.portfolio-modal .close-modal .lr .rl {
+		z-index: 1052;
+		width: 1px;
+		height: 75px;
+		background-color: #222;
+		-webkit-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg);
+	}
+
+	.portfolio-modal .modal-backdrop {
+		display: none;
+		opacity: 0;
+	}
+
+	::-moz-selection {
+		text-shadow: none;
+		background: teal;
+	}
+
+	::selection {
+		text-shadow: none;
+		background: teal;
+	}
+
+	img::selection {
+		background: 0 0;
+	}
+
+	img::-moz-selection {
+		background: 0 0;
+	}
+	
+	.collapsible {
+	  background-color: #777;
+	  color: white;
+	  cursor: pointer;
+	  padding: auto;
+	  width: 100%;
+	  border: none;
+	  text-align: center;
+	  outline: none;
+	  font-size: 15px;
+	}
+
+	.collapsible-active, .collapsible:hover {
+	  background-color: #555;
+	}
+
+	.collapsible-content {
+	  padding: 0 auto;
+	  max-height: 0;
+	  overflow: hidden;
+	  transition: max-height 0.2s ease-out;
+	  background-color: #ffffff;
+	}
+	
+	/* ||||||||||||||||||||||||||||||||||||| */
+	
+	#art-portfolio .art-portfolio-item {
+		right: 0;
+		margin: 0 0 0;
+		width: 100%;
+	}
+
+	#art-portfolio .art-portfolio-item .art-portfolio-link {
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		max-width: 400px;
+	}
+
+	#art-portfolio .art-portfolio-item .art-portfolio-link img {
+		height: 350px;
+	}
+
+	#art-portfolio .art-portfolio-item .art-portfolio-link .art-portfolio-hover {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		/* below changes color on hovering */
+		//background: rgba(0,0,0,.9);
+		-webkit-transition: all ease .3s;
+		-moz-transition: all ease .3s;
+		transition: all ease .3s;
+	}
+	
+	#art-portfolio .art-portfolio-link img {
+	    -webkit-filter: grayscale(100%);
+		-moz-filter: grayscale(100%);
+		-ms-filter: grayscale(100%);
+		-o-filter: grayscale(100%);
+		filter: grayscale(100%);
+		transition: all ease .3s;
+	}
+	
+	/* So we have to write .xxxx:hover img instead of .xxxx img:hover for it to work everywhere */
+	#art-portfolio .art-portfolio-link:hover img {
+		-webkit-filter: grayscale(0%);
+		-moz-filter: grayscale(0%);
+		-ms-filter: grayscale(0%);
+		-o-filter: grayscale(0%);
+		filter: grayscale(0%);
+		transition: all ease .3s;
+		transform: scale(1.05);
+	}
+	
+	/* Chnage opacity of on-hover modal here; keep it at 0 else the + thing appears on Edge and Chrome */
+	#art-portfolio .art-portfolio-item .art-portfolio-link .art-portfolio-hover:hover {
+		opacity: 0;
+	}
+
+	#art-portfolio .art-portfolio-item .art-portfolio-link .art-portfolio-hover .art-portfolio-hover-content {
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		height: 20px;
+		margin-top: -12px;
+		text-align: center;
+		font-size: 20px;
+		color: #fff;
+	}
+
+	#art-portfolio .art-portfolio-item .art-portfolio-link .art-portfolio-hover .art-portfolio-hover-content i {
+		margin-top: -12px;
+	}
+
+	#art-portfolio .art-portfolio-item .art-portfolio-link .art-portfolio-hover .art-portfolio-hover-content h3{
+				margin: 0;
+		font-family: 'Abel', sans-serif;
+		font-size: 18px;
+	}
+	#art-portfolio .art-portfolio-item .art-portfolio-link .art-portfolio-hover .art-portfolio-hover-content h4 {
+		margin: 0;
+		font-family: 'Abel', sans-serif;
+		font-size: 18px;
+	}
+
+	#art-portfolio .art-portfolio-item .art-portfolio-caption {
+		margin: 0 auto;
+		padding: 30px;
+		max-width: 500px;
+		text-align: center;
+		background-color: #fff;
+	}
+
+	#art-portfolio .art-portfolio-item .art-portfolio-caption h4 {
+		margin: 0;
+		text-transform: none;
+		font-family: 'Abel', sans-serif;
+		font-size: 18px;
+	}
+
+	#art-portfolio .art-portfolio-item .art-portfolio-caption p {
+		margin: 0;
+		font-family: 'Abel', sans-serif;
+		font-size: 18px;
+		/* font-style: italic; */
+	}
+
+	#art-portfolio * {
+		z-index: 2;
+	}
+
+	@media(min-width:767px) {
+		/* #art-portfolio .art-portfolio-item { */
+			/* margin: 0 0 30px; */
+		/* } */
+		
+		#art-portfolio .art-portfolio-item {
+		right: -8px;
+		margin: 0 0 0px;
+		width: 48%;
+		}
+		
+		#art-portfolio.art-portfolio-link img {
+			-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+			filter: grayscale(100%);
+		}
+		
+		#art-portfolio .art-portfolio-item .art-portfolio-link {
+			display: block;
+			position: relative;
+			margin: 0 0;
+			max-width: 100%;
+		}
+
+		#art-portfolio .art-portfolio-item .art-portfolio-link img {
+			height: auto;
+		}
+		
+	}
+
+	.flexbox {
+	  display: -webkit-box;
+	  display: -moz-box;
+	  display: -ms-flexbox;
+	  display: -webkit-flex;
+	  display: flex;
+	  -webkit-flex-flow: row wrap;
+	  flex-flow: row wrap;
+	  justify-content: flex-start;
+	  align-items: stretch;
+	}
+
+	.flexbox-center {
+	  justify-content: center;
+	}
+	
+/* |||||||||||||||||||||| STICKY BAR |||||||||||||||||||||||||||||||||| */
+
